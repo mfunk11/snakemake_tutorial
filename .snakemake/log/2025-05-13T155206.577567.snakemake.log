@@ -1,0 +1,36 @@
+host: matthews-mbp.ad.umassmed.edu
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                count
+---------------  -------
+compare_genomes        1
+total                  1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue May 13 15:52:06 2025]
+Job 0: compare all input genomes using sourmash
+Reason: Rules with neither input nor output files are always executed.
+
+[Tue May 13 15:52:45 2025]
+Error in rule compare_genomes:
+    jobid: 0
+    shell:
+        
+        sourmash sketch dna -p k=31 genomes/*.fna.gz --name-from-first
+
+        sourmash compare GCF_000021665.1.fna.gz.sig             GCF_000017325.1.fna.gz.sig GCF_000020225.1.fna.gz.sig             -o compare.mat
+
+        sourmash plot compare.mat
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-05-13T155206.577567.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.
