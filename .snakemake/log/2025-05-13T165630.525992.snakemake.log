@@ -1,0 +1,24 @@
+host: matthews-mbp.ad.umassmed.edu
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job               count
+--------------  -------
+sketch_genomes        1
+total                 1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue May 13 16:56:30 2025]
+localrule sketch_genomes:
+    jobid: 0
+    reason: Rules with neither input nor output files are always executed.
+    resources: tmpdir=/var/folders/kc/w380xwcx35gdssqhfzgrzm9m0000gn/T
+
+[Tue May 13 16:56:31 2025]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2025-05-13T165630.525992.snakemake.log
