@@ -1,0 +1,7 @@
+host: matthews-mbp.ad.umassmed.edu
+Building DAG of jobs...
+MissingInputException in rule compare_genomes in file /Users/matthewfunk/snakemake_tutorial/Snakefile, line 9:
+Missing input files for rule compare_genomes:
+    output: compare.mat
+    affected files:
+        GCF_000021665.1.fna.gz.sigdoes-not-exist.sig

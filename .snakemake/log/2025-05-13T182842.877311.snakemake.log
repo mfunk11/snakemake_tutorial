@@ -1,0 +1,34 @@
+host: matthews-mbp.ad.umassmed.edu
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                count
+---------------  -------
+compare_genomes        1
+plot_comparison        1
+sketch_genomes         1
+total                  3
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue May 13 18:28:42 2025]
+localrule sketch_genomes:
+    output: GCF_000017335.1.fna.gz.sig, GCF_000020225.1.fna.gz.sig, GCF_000021665.1.fna.gz.sig
+    jobid: 2
+    reason: Missing output files: GCF_000020225.1.fna.gz.sig, GCF_000021665.1.fna.gz.sig
+    resources: tmpdir=/var/folders/kc/w380xwcx35gdssqhfzgrzm9m0000gn/T
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule sketch_genomes in file /Users/matthewfunk/snakemake_tutorial/Snakefile, line 1:
+Job 2  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+GCF_000017335.1.fna.gz.sig (missing locally, parent dir not present)
+Removing output files of failed job sketch_genomes since they might be corrupted:
+GCF_000020225.1.fna.gz.sig, GCF_000021665.1.fna.gz.sig
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-05-13T182842.877311.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

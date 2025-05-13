@@ -1,0 +1,26 @@
+host: matthews-mbp.ad.umassmed.edu
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job               count
+--------------  -------
+sketch_genome1        1
+total                 1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue May 13 19:18:32 2025]
+localrule sketch_genome1:
+    input: genomes/GCF_000017325.1.fna.gz
+    output: GCF_000017325.1.fna.gz.sig
+    jobid: 0
+    reason: Missing output files: GCF_000017325.1.fna.gz.sig
+    resources: tmpdir=/var/folders/kc/w380xwcx35gdssqhfzgrzm9m0000gn/T
+
+[Tue May 13 19:18:32 2025]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2025-05-13T191832.003919.snakemake.log

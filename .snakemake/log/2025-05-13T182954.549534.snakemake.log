@@ -1,0 +1,51 @@
+host: matthews-mbp.ad.umassmed.edu
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                count
+---------------  -------
+compare_genomes        1
+plot_comparison        1
+sketch_genomes         1
+total                  3
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue May 13 18:29:54 2025]
+localrule sketch_genomes:
+    output: GCF_000017325.1.fna.gz.sig, GCF_000020225.1.fna.gz.sig, GCF_000021665.1.fna.gz.sig
+    jobid: 2
+    reason: Missing output files: GCF_000020225.1.fna.gz.sig, GCF_000021665.1.fna.gz.sig
+    resources: tmpdir=/var/folders/kc/w380xwcx35gdssqhfzgrzm9m0000gn/T
+
+[Tue May 13 18:29:55 2025]
+Finished job 2.
+1 of 3 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue May 13 18:29:55 2025]
+localrule compare_genomes:
+    input: GCF_000017325.1.fna.gz.sig, GCF_000020225.1.fna.gz.sig, GCF_000021665.1.fna.gz.sig
+    output: compare.mat
+    jobid: 1
+    reason: Missing output files: compare.mat; Input files updated by another job: GCF_000017325.1.fna.gz.sig, GCF_000020225.1.fna.gz.sig, GCF_000021665.1.fna.gz.sig
+    resources: tmpdir=/var/folders/kc/w380xwcx35gdssqhfzgrzm9m0000gn/T
+
+[Tue May 13 18:29:56 2025]
+Finished job 1.
+2 of 3 steps (67%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue May 13 18:29:56 2025]
+Job 0: compare all input genomes using sourmash
+Reason: Missing output files: compare.mat.matrix.png; Input files updated by another job: compare.mat
+
+[Tue May 13 18:29:57 2025]
+Finished job 0.
+3 of 3 steps (100%) done
+Complete log: .snakemake/log/2025-05-13T182954.549534.snakemake.log

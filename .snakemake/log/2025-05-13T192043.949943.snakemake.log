@@ -1,0 +1,14 @@
+host: matthews-mbp.ad.umassmed.edu
+Building DAG of jobs...
+AmbiguousRuleException:
+Rules sketch_genome3 and sketch_genome2 are ambiguous for the file GCF_000021665.1.fna.gz.sig.
+Consider starting rule output with a unique prefix, constrain your wildcards, or use the ruleorder directive.
+Wildcards:
+	sketch_genome3: 
+	sketch_genome2: 
+Expected input files:
+	sketch_genome3: genomes/GCF_000021665.1.fna.gz
+	sketch_genome2: genomes/GCF_000020225.1.fna.gz
+Expected output files:
+	sketch_genome3: GCF_000021665.1.fna.gz.sig
+	sketch_genome2: GCF_000021665.1.fna.gz.sig
